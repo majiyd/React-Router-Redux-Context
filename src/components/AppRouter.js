@@ -7,22 +7,27 @@ import Users from "./Users";
 import NotFound from "./404";
 import styles from "../styles/Nav.module.css";
 
+/**
+ * @DESC AppRouter Object handles app routing
+ * @PARAMS Home, about, contact, users, 404 components 
+ * @RETURN Returns Approuter Component
+ */
 export default class AppRouter extends React.Component {
   render() {
     return (
       <Router >
 				<nav className={styles.nav}>
 					<li className={styles.link}>
-						<NavLink activeClassName="active" to="/">Home</NavLink>
+						<NavLink exact activeClassName={styles.active}  to="/">Home</NavLink>
 					</li>
 					<li className={styles.link}>
-						<NavLink activeClassName="active" to="/About/">About Us</NavLink>
+						<NavLink activeClassName={styles.active}  to="/About/">About Us</NavLink>
 					</li>
 					<li className={styles.link}>
-						<NavLink activeClassName="active" to="/Contact/">Contact Us</NavLink>
+						<NavLink activeClassName={styles.active} to="/Contact/">Contact Us</NavLink>
 					</li>
 					<li className={styles.link}>
-						<NavLink activeClassName="active" to="/Users/">Users</NavLink>
+						<NavLink activeClassName={styles.active}  to="/Users/">Users</NavLink>
 					</li>
 				</nav>
 
@@ -31,6 +36,7 @@ export default class AppRouter extends React.Component {
           <Route path="/About/" component={About} />
           <Route path="/Contact/" component={Contact} />
           <Route path="/Users/:id" component={Users} />
+					<Route path="/Users/" component={Users} />
           <Route component={NotFound} />
         </Switch>
       </Router>
