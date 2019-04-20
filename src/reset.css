@@ -3,7 +3,12 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family:  'Arial Narrow Bold', sans-serif
 }
 a{
   color: inherit;
+}
+body{
+  background-color: #2b2931;
+  color: white;
 }

@@ -2,15 +2,18 @@
   display: flex;
   list-style-type: none;
   padding: 10px;
+  flex-grow: 1;
+  background-color: white;
+  margin-bottom: 30px;
 }
 .link{
-  color: white;
+  color:#745fb5;
   padding: 15px 15px;
-  background-color: #745fb5;
+  
   display: block;
   margin-left: 30px;
 }
 .active{
-  /* color: #34425a; */
-  color: #ec223d;
+  color: white;
+  background-color: #745fb5;
 }

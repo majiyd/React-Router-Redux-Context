@@ -17,17 +17,17 @@ export default class AppRouter extends React.Component {
     return (
       <Router >
 				<nav className={styles.nav}>
-					<li className={styles.link}>
-						<NavLink exact activeClassName={styles.active}  to="/">Home</NavLink>
+					<li >
+						<NavLink className={styles.link} exact activeClassName={styles.active}  to="/">Home</NavLink>
 					</li>
-					<li className={styles.link}>
-						<NavLink activeClassName={styles.active}  to="/About/">About Us</NavLink>
+					<li >
+						<NavLink className={styles.link} activeClassName={styles.active}  to="/About/">About Us</NavLink>
 					</li>
-					<li className={styles.link}>
-						<NavLink activeClassName={styles.active} to="/Contact/">Contact Us</NavLink>
+					<li >
+						<NavLink className={styles.link} activeClassName={styles.active} to="/Contact/">Contact Us</NavLink>
 					</li>
-					<li className={styles.link}>
-						<NavLink activeClassName={styles.active}  to="/Users/">Users</NavLink>
+					<li >
+						<NavLink className={styles.link} activeClassName={styles.active}  to="/Users/">Users</NavLink>
 					</li>
 				</nav>
 
