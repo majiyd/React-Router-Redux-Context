@@ -1,0 +1,7 @@
+.nav{
+  display: flex;
+  list-style-type: none;
+}
+.link{
+  padding: 15px 15px;
+}
