@@ -1,5 +1,5 @@
 .nav{
-  display: flex;
+  display: block;
   list-style-type: none;
   padding: 10px;
   flex-grow: 1;
@@ -9,11 +9,26 @@
 .link{
   color:#745fb5;
   padding: 15px 15px;
-  
   display: block;
-  margin-left: 30px;
+  /* margin-left: 30px; */
+  text-align: center
 }
 .active{
   color: white;
   background-color: #745fb5;
+}
+
+@media (min-width: 767px){
+  .link{
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1023px){
+  .nav{
+    display: flex;
+  }
+  .link{
+    margin-left: 30px;
+    font-size: initial;
+  }
 }
