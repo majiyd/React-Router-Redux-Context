@@ -6,6 +6,7 @@ export default class Home extends React.Component{
         return(
             <React.Fragment>
                 <h1 className={styles.large}>Home</h1>
+                <p className={styles.large}> We are mobile first</p>
             </React.Fragment>
         )
     }

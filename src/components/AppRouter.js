@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import Users from "./Users";
+import Context from "./Context"
 import NotFound from "./404";
 import styles from "../styles/Nav.module.css";
 
@@ -29,6 +30,9 @@ export default class AppRouter extends React.Component {
 					<li >
 						<NavLink className={styles.link} activeClassName={styles.active}  to="/Users/">Users</NavLink>
 					</li>
+					<li >
+						<NavLink className={styles.link} activeClassName={styles.active}  to="/Context/">Context</NavLink>
+					</li>
 				</nav>
 
         <Switch>
@@ -37,6 +41,7 @@ export default class AppRouter extends React.Component {
           <Route path="/Contact/" component={Contact} />
           <Route path="/Users/:id" component={Users} />
 					<Route path="/Users/" component={Users} />
+					<Route path="/Context/" component={Context} />
           <Route component={NotFound} />
         </Switch>
       </Router>
