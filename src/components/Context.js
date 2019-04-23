@@ -1,4 +1,8 @@
 import React from 'react'
+import large from '../styles/Button.module.css'
+import context from '../styles/Text.module.css'
+let styles = {}
+Object.assign(styles, context, large)
 
 const Context = React.createContext()
 
@@ -35,13 +39,13 @@ class  ChildWindow extends React.Component {
     return ( 
       <React.Fragment>
         <Context.Consumer>
-          {context=><button onClick={context.increment}>Increment +</button>}
+          {context=><button className={styles.large} onClick={context.increment}>+</button>}
         </Context.Consumer>
         <Context.Consumer>
-          {context=><button onClick={context.decrement}>Decrement -</button>}
+          {context=><button className={styles.large} onClick={context.decrement}> - </button>}
         </Context.Consumer>
         <Context.Consumer>
-          {context=><p>{context.state.number}</p>}
+          {context=><p className={styles.context}>{context.state.number}</p>}
         </Context.Consumer>
       </React.Fragment>
     );
