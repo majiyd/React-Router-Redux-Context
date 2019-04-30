@@ -9,7 +9,6 @@ const initialState = {
   count: 0
 }
 function reducer(state=initialState, action){
-  console.log(state, action)
   switch (action.type){
     case 'INCREMENT':
       return{
@@ -28,9 +27,6 @@ function reducer(state=initialState, action){
   }
 }
 const store = createStore(reducer)
-store.dispatch({ type: "INCREMENT" });
-store.dispatch({ type: "DECREMENT" });
-store.dispatch({ type: "RESET" });
 
 ReactDOM.render(
   <Provider store={store}>

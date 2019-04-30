@@ -7,6 +7,7 @@ import Users from "./Users";
 import Context from "./Context"
 import NotFound from "./404";
 import styles from "../styles/Nav.module.css";
+import ReduxCounter from "./ReduxCounter";
 
 /**
  * @DESC AppRouter Object handles app routing
@@ -33,6 +34,9 @@ export default class AppRouter extends React.Component {
 					<li >
 						<NavLink className={styles.link} activeClassName={styles.active}  to="/Context/">Context</NavLink>
 					</li>
+					<li >
+						<NavLink className={styles.link} activeClassName={styles.active}  to="/Redux/">Redux</NavLink>
+					</li>
 				</nav>
 
         <Switch>
@@ -42,6 +46,7 @@ export default class AppRouter extends React.Component {
           <Route path="/Users/:id" component={Users} />
 					<Route path="/Users/" component={Users} />
 					<Route path="/Context/" component={Context} />
+					<Route path="/Redux/" component={ReduxCounter} />
           <Route component={NotFound} />
         </Switch>
       </Router>
